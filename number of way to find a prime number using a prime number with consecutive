@@ -1,0 +1,55 @@
+class adm
+{
+    int a;
+    int count;
+    boolean cal(int n)
+   {
+    int i,f=0;
+    boolean d=true;
+    for(i=2;i<n;i++)
+    {
+        if(n%i==0)
+        f++;
+        
+    }
+    if(f==0)
+    return true;
+    else 
+    return false;
+    
+    }
+}
+ class Main extends adm
+{
+    
+
+public static void main(String[] args) {
+    adm obj=new adm();
+    obj.a=user input;
+    for(int i=3;i<obj.a;i++)
+    {
+        int sum=0;
+        for(int j=2;j<i;j++)
+        {
+            if(obj.cal(j))
+            {
+                sum+=j;
+                if(sum>=i)
+                break;
+            }
+            
+        }
+        if(sum==i)
+        {
+            if(obj.cal(i))
+            obj.count++;
+        }
+        
+    }
+    System.out.println(obj.count);
+    
+    
+   
+
+}
+}
